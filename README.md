@@ -10,10 +10,10 @@
 <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;500;600;700;800;900&display=swap" rel="stylesheet"/>
 <style>
 :root {
-  --green:     #1D77DF; /* Diubah menjadi Biru Finansialku */
-  --green-dk:  #155FB4; /* Biru Gelap */
-  --green-lt:  #EAF2FC; /* Biru Muda Terang */
-  --green-tab: rgba(255,255,255,0.25);
+  --blue:     #29ABE2; /* Diubah menjadi Biru Finansialku */
+  --blue-dk:  #155FB4; /* Biru Gelap */
+  --blue-lt:  #EAF2FC; /* Biru Muda Terang */
+  --blue-tab: rgba(255,255,255,0.25);
   --orange:    #F5A623;
   --orange-lt: #FEF6E4;
   --bg:        #F0F2F0;
@@ -43,7 +43,7 @@ html,body{min-height:100%;background:var(--bg);color:var(--text);font-family:var
 
 /* BLUE HEADER */
 .home-header{
-  background:var(--green);
+  background:var(--blue);
   padding:calc(var(--safe-top)+14px) 20px 0;
   position:sticky;top:0;z-index:50;
 }
@@ -102,7 +102,7 @@ html,body{min-height:100%;background:var(--bg);color:var(--text);font-family:var
   background:none;border-left:none;border-right:none;border-top:none;
   font-family:var(--font);
 }
-.period-tab.active{color:var(--green);border-bottom:2px solid var(--green);}
+.period-tab.active{color:var(--blue);border-bottom:2px solid var(--blue);}
 
 .period-nav{
   display:flex;align-items:center;justify-content:center;
@@ -166,7 +166,7 @@ html,body{min-height:100%;background:var(--bg);color:var(--text);font-family:var
    TRANSAKSI SCREEN
 ══════════════════════════════ */
 .tx-header{
-  background:var(--green);
+  background:var(--blue);
   padding:calc(var(--safe-top)+14px) 20px 0;
   position:sticky;top:0;z-index:50;
 }
@@ -221,7 +221,7 @@ html,body{min-height:100%;background:var(--bg);color:var(--text);font-family:var
    ADD TRANSACTION SCREEN
 ══════════════════════════════ */
 .add-header{
-  background:var(--green);
+  background:var(--blue);
   padding:calc(var(--safe-top)+14px) 20px 0;
   position:sticky;top:0;z-index:50;
 }
@@ -254,7 +254,7 @@ html,body{min-height:100%;background:var(--bg);color:var(--text);font-family:var
   background:none;text-align:right;min-width:80px;max-width:160px;
   letter-spacing:-1px;
 }
-.amt-number:focus{border-bottom-color:var(--green);}
+.amt-number:focus{border-bottom-color:var(--blue);}
 
 /* CATEGORY SECTION */
 .add-section{background:#fff;margin-top:8px;padding:16px 16px 8px;}
@@ -265,9 +265,9 @@ html,body{min-height:100%;background:var(--bg);color:var(--text);font-family:var
   padding:10px 4px 8px;border-radius:12px;cursor:pointer;
   transition:background .12s;
 }
-.add-cat-item:active{background:var(--green-lt);}
-.add-cat-item.sel .add-cat-circle{background:var(--green) !important;}
-.add-cat-item.sel .add-cat-name{color:var(--green);}
+.add-cat-item:active{background:var(--blue-lt);}
+.add-cat-item.sel .add-cat-circle{background:var(--blue) !important;}
+.add-cat-item.sel .add-cat-name{color:var(--blue);}
 .add-cat-circle{
   width:52px;height:52px;border-radius:50%;
   display:flex;align-items:center;justify-content:center;
@@ -315,7 +315,7 @@ html,body{min-height:100%;background:var(--bg);color:var(--text);font-family:var
   z-index:100;padding-top:10px;
 }
 .nav-btn{display:flex;flex-direction:column;align-items:center;gap:3px;background:none;border:none;color:#BBB;cursor:pointer;padding:4px 20px;font-family:var(--font);transition:color .12s;}
-.nav-btn.active{color:var(--green);}
+.nav-btn.active{color:var(--blue);}
 .nav-btn svg{width:22px;height:22px;}
 .nav-lbl{font-size:10px;font-weight:700;}
 
@@ -329,7 +329,7 @@ html,body{min-height:100%;background:var(--bg);color:var(--text);font-family:var
    PENGELUARAN TETAP SCREEN
 ══════════════════════════════ */
 .tetap-header{
-  background:var(--green);
+  background:var(--blue);
   padding:calc(var(--safe-top)+14px) 20px 16px;
   position:sticky;top:0;z-index:50;
 }
@@ -344,8 +344,8 @@ html,body{min-height:100%;background:var(--bg);color:var(--text);font-family:var
 .pc-title{font-size:13px;font-weight:700;color:var(--text);}
 .pc-sub覆{font-size:11px;color:var(--sub);margin-top:2px;}
 .pc-track{height:5px;background:var(--bg);border-radius:4px;margin-top:7px;overflow:hidden;}
-.pc-fill{height:100%;border-radius:4px;background:linear-gradient(90deg,var(--green),#7EC8A0);transition:width .5s ease;}
-.pc-count{font-size:20px;font-weight:800;color:var(--green);}
+.pc-fill{height:100%;border-radius:4px;background:linear-gradient(90deg,var(--blue),#7EC8A0);transition:width .5s ease;}
+.pc-count{font-size:20px;font-weight:800;color:var(--blue);}
 
 .tetap-list{display:flex;flex-direction:column;gap:8px;}
 .tetap-item{background:var(--card);border-radius:12px;padding:12px 14px;display:flex;align-items:center;gap:11px;box-shadow:0 1px 5px rgba(0,0,0,.05);position:relative;transition:opacity .2s;}
@@ -357,13 +357,13 @@ html,body{min-height:100%;background:var(--bg);color:var(--text);font-family:var
 .ti-sub{font-size:11px;color:var(--sub);margin-top:1px;}
 .ti-right{display:flex;flex-direction:column;align-items:flex-end;gap:5px;flex-shrink:0;}
 .ti-amount{font-size:13px;font-weight:800;color:var(--red);}
-.pay-btn{background:var(--green);color:#fff;border:none;border-radius:8px;padding:5px 12px;font-family:var(--font);font-size:11px;font-weight:700;cursor:pointer;transition:transform .12s;white-space:nowrap;}
+.pay-btn{background:var(--blue);color:#fff;border:none;border-radius:8px;padding:5px 12px;font-family:var(--font);font-size:11px;font-weight:700;cursor:pointer;transition:transform .12s;white-space:nowrap;}
 .pay-btn:active{transform:scale(.92);}
 .tetap-item.paid .pay-btn{background:#888;pointer-events:none;}
 .ti-acts{position:absolute;top:6px;right:8px;display:flex;gap:2px;}
 .ti-act{background:none;border:none;color:#CCC;font-size:14px;cursor:pointer;padding:2px 4px;border-radius:5px;transition:color .12s;}
 .ti-act:active{color:var(--red);}
-.ti-act.ed:active{color:var(--green);}
+.ti-act.ed:active{color:var(--blue);}
 
 /* ADD TETAP SHEET */
 .overlay{position:fixed;inset:0;background:rgba(0,0,0,.3);z-index:200;display:none;align-items:flex-end;backdrop-filter:blur(3px);}
@@ -374,27 +374,27 @@ html,body{min-height:100%;background:var(--bg);color:var(--text);font-family:var
 .sh-title{font-size:17px;font-weight:800;margin-bottom:4px;color:var(--text);}
 .sh-sub{font-size:13px;color:var(--sub);margin-bottom:16px;line-height:1.5;}
 .sh-amt-wrap{background:var(--bg);border:1.5px solid var(--border);border-radius:13px;padding:13px 16px;margin-bottom:11px;display:flex;align-items:center;gap:7px;transition:border-color .13s;}
-.sh-amt-wrap:focus-within{border-color:var(--green);}
+.sh-amt-wrap:focus-within{border-color:var(--blue);}
 .sh-amt-pre{font-size:16px;font-weight:700;color:var(--sub);}
 .sh-amt-inp{flex:1;background:none;border:none;outline:none;font-family:var(--font);font-size:24px;font-weight:800;color:var(--text);letter-spacing:-1px;width:100%;}
 .sh-amt-inp::placeholder{color:#DDD;}
 .sh-fld-group{display:flex;flex-direction:column;gap:7px;margin-bottom:12px;}
 .sh-fld{background:var(--bg);border:1.5px solid var(--border);border-radius:11px;padding:11px 13px;display:flex;flex-direction:column;gap:3px;transition:border-color .13s;}
-.sh-fld:focus-within{border-color:var(--green);}
+.sh-fld:focus-within{border-color:var(--blue);}
 .sh-fld label{font-size:10px;font-weight:700;letter-spacing:1px;text-transform:uppercase;color:var(--sub);}
 .sh-fld input{background:none;border:none;outline:none;font-family:var(--font);font-size:14px;font-weight:600;color:var(--text);width:100%;padding:0;}
 .sh-cat-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:6px;margin-bottom:14px;}
 .sh-cat-opt{display:flex;flex-direction:column;align-items:center;gap:4px;padding:8px 2px;border-radius:11px;border:1.5px solid var(--border);background:var(--bg);cursor:pointer;transition:all .12s;}
 .sh-cat-opt:active{transform:scale(.93);}
-.sh-cat-opt.sel{border-color:var(--green);background:var(--green-lt);}
+.sh-cat-opt.sel{border-color:var(--blue);background:var(--blue-lt);}
 .sh-cat-opt .co-i{font-size:20px;line-height:1;}
 .sh-cat-opt .co-n{font-size:10px;font-weight:600;color:var(--sub);text-align:center;}
-.sh-cat-opt.sel .co-n{color:var(--green);}
+.sh-cat-opt.sel .co-n{color:var(--blue);}
 .sh-save-btn{width:100%;background:var(--orange);color:var(--text);border:none;border-radius:50px;padding:14px;font-family:var(--font);font-size:15px;font-weight:800;cursor:pointer;transition:opacity .12s;box-shadow:0 4px 12px rgba(245,166,35,.3);}
 .sh-save-btn:active{opacity:.88;}
 
 /* SETT */
-.sett-header{background:var(--green);padding:calc(var(--safe-top)+14px) 20px 16px;position:sticky;top:0;z-index:50;}
+.sett-header{background:var(--blue);padding:calc(var(--safe-top)+14px) 20px 16px;position:sticky;top:0;z-index:50;}
 .sett-header-title{font-size:15px;font-weight:800;color:#fff;}
 .sett-content{flex:1;overflow-y:auto;padding:14px 14px calc(80px+var(--safe-bot));display:flex;flex-direction:column;gap:10px;}
 .sett-card{background:var(--card);border-radius:14px;overflow:hidden;box-shadow:0 1px 5px rgba(0,0,0,.06);}
@@ -816,7 +816,7 @@ function setAddTab(t) {
 function buildAddCatGrid() {
   document.getElementById('addCatGrid').innerHTML = CATS.map(c=>`
     <div class="add-cat-item ${c.k===selAddCat?'sel':''}" onclick="pickAddCat('${c.k}')">
-      <div class="add-cat-circle" style="background:${c.k===selAddCat?'var(--green)':c.bg}">${c.i}</div>
+      <div class="add-cat-circle" style="background:${c.k===selAddCat?'var(--blue)':c.bg}">${c.i}</div>
       <span class="add-cat-name">${c.k}</span>
     </div>`).join('');
 }
