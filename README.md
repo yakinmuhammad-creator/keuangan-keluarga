@@ -5,14 +5,14 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover"/>
 <meta name="apple-mobile-web-app-capable" content="yes"/>
 <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent"/>
-<meta name="theme-color" content="#29ABE2"/>
+<meta name="theme-color" content="#1D77DF"/>
 <title>Dompetku</title>
 <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;500;600;700;800;900&display=swap" rel="stylesheet"/>
 <style>
 :root {
-  --green:     #29ABE2;
-  --green-dk:  #1A8BB8;
-  --green-lt:  #E3F2FD;
+  --green:     #1D77DF; /* Diubah menjadi Biru Finansialku */
+  --green-dk:  #155FB4; /* Biru Gelap */
+  --green-lt:  #EAF2FC; /* Biru Muda Terang */
   --green-tab: rgba(255,255,255,0.25);
   --orange:    #F5A623;
   --orange-lt: #FEF6E4;
@@ -23,14 +23,13 @@
   --text2:     #555;
   --sub:       #AAA;
   --red:       #E74C3C;
-  --blue:      #3498DB;
+  --blue:      #1D77DF;
   --font:      'Nunito', sans-serif;
   --safe-top:  env(safe-area-inset-top, 0px);
   --safe-bot:  env(safe-area-inset-bottom, 0px);
 }
 *{margin:0;padding:0;box-sizing:border-box;-webkit-tap-highlight-color:transparent;}
 html,body{min-height:100%;background:var(--bg);color:var(--text);font-family:var(--font);overscroll-behavior:none;}
-body::after{content:"";display:block;height:env(safe-area-inset-bottom,0px);}
 
 /* ══════════════════════════════
    SCREENS
@@ -49,16 +48,10 @@ body::after{content:"";display:block;height:env(safe-area-inset-bottom,0px);}
   position:sticky;top:0;z-index:50;
 }
 .hh-top{
-  display:flex;align-items:center;justify-content:space-between;
+  display:flex;align-items:center;justify-content:center; /* Diubah ke center agar judul simetris */
   margin-bottom:12px;
 }
-.hh-menu{
-  background:none;border:none;cursor:pointer;
-  display:flex;flex-direction:column;gap:4px;padding:4px;
-}
-.hh-menu span{display:block;width:22px;height:2px;background:#fff;border-radius:2px;}
 .hh-title{font-size:14px;font-weight:700;color:rgba(255,255,255,0.9);letter-spacing:1px;text-transform:uppercase;}
-.hh-icon-btn{background:none;border:none;cursor:pointer;color:#fff;font-size:22px;}
 
 .saldo-wrap{text-align:center;padding-bottom:16px;}
 .saldo-lbl{font-size:12px;font-weight:600;color:rgba(255,255,255,0.7);letter-spacing:1.5px;text-transform:uppercase;margin-bottom:4px;}
@@ -315,7 +308,7 @@ body::after{content:"";display:block;height:env(safe-area-inset-bottom,0px);}
   position:fixed;bottom:0;left:0;right:0;
   height:calc(64px + var(--safe-bot));
   padding-bottom:var(--safe-bot);
-  background:#FFFFFF;
+  background:rgba(255,255,255,0.97);
   backdrop-filter:blur(16px);-webkit-backdrop-filter:blur(16px);
   border-top:1px solid var(--border);
   display:flex;align-items:flex-start;justify-content:space-around;
@@ -349,9 +342,9 @@ body::after{content:"";display:block;height:env(safe-area-inset-bottom,0px);}
 .prog-card{background:var(--card);border-radius:14px;padding:14px 16px;margin-bottom:12px;box-shadow:0 1px 6px rgba(0,0,0,.06);display:none;align-items:center;gap:12px;}
 .pc-text{flex:1;}
 .pc-title{font-size:13px;font-weight:700;color:var(--text);}
-.pc-sub{font-size:11px;color:var(--sub);margin-top:2px;}
+.pc-sub覆{font-size:11px;color:var(--sub);margin-top:2px;}
 .pc-track{height:5px;background:var(--bg);border-radius:4px;margin-top:7px;overflow:hidden;}
-.pc-fill{height:100%;border-radius:4px;background:linear-gradient(90deg,var(--green),#64C8EE);transition:width .5s ease;}
+.pc-fill{height:100%;border-radius:4px;background:linear-gradient(90deg,var(--green),#7EC8A0);transition:width .5s ease;}
 .pc-count{font-size:20px;font-weight:800;color:var(--green);}
 
 .tetap-list{display:flex;flex-direction:column;gap:8px;}
@@ -416,12 +409,9 @@ body::after{content:"";display:block;height:env(safe-area-inset-bottom,0px);}
 </head>
 <body>
 
-<!-- ══════════════════════════════════
-     HOME SCREEN
-══════════════════════════════════ -->
 <div class="screen active" id="screen-home">
   <div class="home-header">
-    <div class="hh-top" style="justify-content:center;">
+    <div class="hh-top">
       <span class="hh-title">SALDO</span>
     </div>
     <div class="saldo-wrap">
@@ -438,7 +428,6 @@ body::after{content:"";display:block;height:env(safe-area-inset-bottom,0px);}
   </div>
 
   <div class="home-content">
-    <!-- PERIOD CARD with CHART -->
     <div class="period-card">
       <div class="period-tabs">
         <button class="period-tab active" onclick="setPeriod('hari',this)">Hari</button>
@@ -461,14 +450,10 @@ body::after{content:"";display:block;height:env(safe-area-inset-bottom,0px);}
       </div>
     </div>
 
-    <!-- CATEGORY ROWS -->
     <div class="cat-rows" id="catRows"></div>
   </div>
 </div>
 
-<!-- ══════════════════════════════════
-     TRANSAKSI SCREEN
-══════════════════════════════════ -->
 <div class="screen" id="screen-transaksi">
   <div class="tx-header">
     <div class="txh-top">
@@ -495,9 +480,6 @@ body::after{content:"";display:block;height:env(safe-area-inset-bottom,0px);}
   </div>
 </div>
 
-<!-- ══════════════════════════════════
-     ADD TRANSACTION SCREEN
-══════════════════════════════════ -->
 <div class="screen" id="screen-add">
   <div class="add-header">
     <div class="addh-top">
@@ -537,9 +519,6 @@ body::after{content:"";display:block;height:env(safe-area-inset-bottom,0px);}
   </div>
 </div>
 
-<!-- ══════════════════════════════════
-     PENGELUARAN TETAP SCREEN
-══════════════════════════════════ -->
 <div class="screen" id="screen-tetap">
   <div class="tetap-header">
     <div class="tetaph-top">
@@ -560,9 +539,6 @@ body::after{content:"";display:block;height:env(safe-area-inset-bottom,0px);}
   </div>
 </div>
 
-<!-- ══════════════════════════════════
-     PENGATURAN SCREEN
-══════════════════════════════════ -->
 <div class="screen" id="screen-sett">
   <div class="sett-header"><div class="sett-header-title">⚙️ Pengaturan</div></div>
   <div class="sett-content">
@@ -577,7 +553,6 @@ body::after{content:"";display:block;height:env(safe-area-inset-bottom,0px);}
   </div>
 </div>
 
-<!-- BOTTOM NAV -->
 <nav class="bottom-nav">
   <button class="nav-btn active" id="nav-home" onclick="goScreen('home')">
     <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 9.5L12 3l9 6.5V20a1 1 0 0 1-1 1H4a1 1 0 0 1-1-1V9.5z"/><path d="M9 21V12h6v9"/></svg>
@@ -601,18 +576,17 @@ body::after{content:"";display:block;height:env(safe-area-inset-bottom,0px);}
   </button>
 </nav>
 
-<!-- SHEET PENGELUARAN TETAP -->
 <div class="overlay" id="ovTetap" onclick="if(event.target===this)closeTetapSheet()">
   <div class="sheet">
     <div class="sh-handle"></div>
     <div class="sh-title" id="tetapShTitle">Pengeluaran Tetap Baru</div>
     <div class="sh-sub">Tap <b>Bayar</b> saat sudah dibayar — otomatis langsung tercatat.</div>
     <div class="sh-amt-wrap"><span class="sh-amt-pre">Rp</span><input class="sh-amt-inp" type="text" id="tJml" placeholder="0" inputmode="numeric" oninput="fmtInput(this)"/></div>
-    <div class="sh-cat-grid" id="tetapCatGrid"></div>
     <div class="sh-fld-group">
       <div class="sh-fld"><label>Nama</label><input type="text" id="tNama" placeholder="cth: Listrik, WiFi, Uang Mama..."/></div>
       <div class="sh-fld"><label>Catatan (opsional)</label><input type="text" id="tCat" placeholder="cth: PLN, Indihome..."/></div>
     </div>
+    <div class="sh-cat-grid" id="tetapCatGrid"></div>
     <button class="sh-save-btn" onclick="simpanTetap()">Simpan</button>
   </div>
 </div>
@@ -625,7 +599,7 @@ body::after{content:"";display:block;height:env(safe-area-inset-bottom,0px);}
    KATEGORI & WARNA DONUT
 ═══════════════════════════════════ */
 const CATS = [
-  {k:'Makanan',    i:'🍜', bg:'#4A8C6F', color:'#4A8C6F'},
+  {k:'Makanan',    i:'🍜', bg:'#1D77DF', color:'#1D77DF'},
   {k:'Belanja',    i:'🛍️', bg:'#3498DB', color:'#3498DB'},
   {k:'Transport',  i:'🚗', bg:'#F5A623', color:'#F5A623'},
   {k:'Kesehatan',  i:'💊', bg:'#E74C3C', color:'#E74C3C'},
