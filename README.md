@@ -5,14 +5,14 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover"/>
 <meta name="apple-mobile-web-app-capable" content="yes"/>
 <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent"/>
-<meta name="theme-color" content="#4A8C6F"/>
+<meta name="theme-color" content="#29ABE2"/>
 <title>Dompetku</title>
 <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;500;600;700;800;900&display=swap" rel="stylesheet"/>
 <style>
 :root {
-  --green:     #4A8C6F;
-  --green-dk:  #3A7060;
-  --green-lt:  #E8F5EE;
+  --green:     #29ABE2;
+  --green-dk:  #1A8BB8;
+  --green-lt:  #E3F2FD;
   --green-tab: rgba(255,255,255,0.25);
   --orange:    #F5A623;
   --orange-lt: #FEF6E4;
@@ -30,6 +30,7 @@
 }
 *{margin:0;padding:0;box-sizing:border-box;-webkit-tap-highlight-color:transparent;}
 html,body{min-height:100%;background:var(--bg);color:var(--text);font-family:var(--font);overscroll-behavior:none;}
+body::after{content:"";display:block;height:env(safe-area-inset-bottom,0px);}
 
 /* ══════════════════════════════
    SCREENS
@@ -41,7 +42,7 @@ html,body{min-height:100%;background:var(--bg);color:var(--text);font-family:var
    HOME SCREEN
 ══════════════════════════════ */
 
-/* GREEN HEADER */
+/* BLUE HEADER */
 .home-header{
   background:var(--green);
   padding:calc(var(--safe-top)+14px) 20px 0;
@@ -314,7 +315,7 @@ html,body{min-height:100%;background:var(--bg);color:var(--text);font-family:var
   position:fixed;bottom:0;left:0;right:0;
   height:calc(64px + var(--safe-bot));
   padding-bottom:var(--safe-bot);
-  background:rgba(255,255,255,0.97);
+  background:#FFFFFF;
   backdrop-filter:blur(16px);-webkit-backdrop-filter:blur(16px);
   border-top:1px solid var(--border);
   display:flex;align-items:flex-start;justify-content:space-around;
@@ -350,7 +351,7 @@ html,body{min-height:100%;background:var(--bg);color:var(--text);font-family:var
 .pc-title{font-size:13px;font-weight:700;color:var(--text);}
 .pc-sub{font-size:11px;color:var(--sub);margin-top:2px;}
 .pc-track{height:5px;background:var(--bg);border-radius:4px;margin-top:7px;overflow:hidden;}
-.pc-fill{height:100%;border-radius:4px;background:linear-gradient(90deg,var(--green),#7EC8A0);transition:width .5s ease;}
+.pc-fill{height:100%;border-radius:4px;background:linear-gradient(90deg,var(--green),#64C8EE);transition:width .5s ease;}
 .pc-count{font-size:20px;font-weight:800;color:var(--green);}
 
 .tetap-list{display:flex;flex-direction:column;gap:8px;}
@@ -420,12 +421,8 @@ html,body{min-height:100%;background:var(--bg);color:var(--text);font-family:var
 ══════════════════════════════════ -->
 <div class="screen active" id="screen-home">
   <div class="home-header">
-    <div class="hh-top">
-      <button class="hh-menu" onclick="goScreen('sett')">
-        <span></span><span></span><span></span>
-      </button>
+    <div class="hh-top" style="justify-content:center;">
       <span class="hh-title">SALDO</span>
-      <button class="hh-icon-btn" onclick="goScreen('transaksi')">☰</button>
     </div>
     <div class="saldo-wrap">
       <div class="saldo-lbl">SALDO</div>
